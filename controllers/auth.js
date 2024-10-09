@@ -7,7 +7,7 @@ const router = express.Router();
 const User = require("../models/user");
 const AuthenticateToken = require("../middleware/auth");
 
-// Register endpoint
+
 router.post("/register", async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -69,7 +69,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// Protected route example
+
 router.get("/dashboard", AuthenticateToken, (req, res) => {
   res.json({ message: "Welcome to the dashboard!", userId: req.user.userId });
 });
