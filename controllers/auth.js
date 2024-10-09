@@ -7,6 +7,9 @@ const router = express.Router();
 const User = require("../models/user");
 const AuthenticateToken = require("../middleware/auth");
 
+router.get('/', function (req, res) {
+  res.json({ message: "Welcome to Signal API!" });
+})
 
 router.post("/register", async (req, res) => {
   try {
