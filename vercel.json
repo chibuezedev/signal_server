@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "signal-server",
+  "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/app.js" }],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
