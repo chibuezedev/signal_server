@@ -5,8 +5,8 @@
   "scripts": {
     "clean": "rimraf build/",
     "build": "echo \"Vercel doesn't need a build script defined as it detects and builds automatically.\"",
-    "start": "cross-env NODE_ENV=production node build/app.js",
-    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node app.js"
+    "start": "nodemon app.js",
+    "dev": "nodemon --exec babel-node app.js"
   },
   "keywords": [],
   "author": "",
